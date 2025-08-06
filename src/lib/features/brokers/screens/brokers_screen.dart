@@ -4,11 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../shared/balance_view.dart';
 import '../bloc/brokers_cubit.dart';
-import 'package:dio/dio.dart';
-
 import '../data/brokers_data_provider.dart';
 import '../data/brokers_repository.dart';
 import '../widgets/broker_card.dart';
+import '../../shared/api_client.dart';
 
 /// Screen that displays available brokers and allows opening them in WebView.
 class BrokersScreen extends StatelessWidget {
@@ -16,12 +15,7 @@ class BrokersScreen extends StatelessWidget {
       : _repository = repository ??
             BrokersRepository(
               HttpBrokersDataProvider(
-                Dio(
-                  BaseOptions(
-                    baseUrl:
-                        'https://us-central1-fx-trading-study.cloudfunctions.net',
-                  ),
-                ),
+                createApiClient(),
               ),
             );
 

@@ -37,6 +37,7 @@ dependencies:
   go_router: ^10.1.2
   easy_localization: ^3.0.3
   webview_flutter: ^4.0.7
+  fl_chart: ^0.63.0
 
 dev_dependencies:
   flutter_test:
