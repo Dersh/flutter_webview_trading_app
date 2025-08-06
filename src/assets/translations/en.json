@@ -1,0 +1,16 @@
+{
+  "app_title": "Trading App",
+  "nav": {
+    "learn": "Learn",
+    "trade": "Trade",
+    "brokers": "Platforms"
+  },
+  "learn": {
+    "title": "Trading School"
+  },
+  "balance": "Balance: ${amount}",
+  "lesson": {
+    "reward": "Reward: ${reward}",
+    "complete": "Scroll to end to complete"
+  }
+}
