@@ -7,37 +7,37 @@ app.get("/articles", (req, res) => {
     "alias": "why-trade-forex",
     "title": "Зачем торговать на Forex?",
     "reward": "Collect $200",
-    "url": "/why-trade-forex.html"
+    "url": "/why-trade-forex.html",
   },
   {
     "alias": "how-much-can-you-make",
     "title": "Сколько можно заработать на трейдинге?",
     "reward": "Collect $100",
-    "url": "/how-much-can-you-make.html"
+    "url": "/how-much-can-you-make.html",
   },
   {
     "alias": "when-to-trade-forex",
     "title": "Когда лучше торговать на Forex?",
     "reward": "Collect $100",
-    "url": "/when-to-trade-forex.html"
+    "url": "/when-to-trade-forex.html",
   },
   {
     "alias": "forex-basics",
     "title": "Основы торговли на Forex",
     "reward": "Collect $200",
-    "url": "/forex-basics.html"
+    "url": "/forex-basics.html",
   },
   {
     "alias": "social-trading",
     "title": "Что такое социальный трейдинг?",
     "reward": "Collect $200",
-    "url": "/social-trading.html"
+    "url": "/social-trading.html",
   },
   {
     "alias": "smart-portfolios",
     "title": "Умные портфели: как диверсифицировать риски",
     "reward": "Collect $100",
-    "url": "/smart-portfolios.html"
+    "url": "/smart-portfolios.html",
   }]);
 });
 
@@ -52,10 +52,10 @@ app.get("/brokers", (req, res) => {
     "minDeposit": "Start from $50",
     "badges": [
       "BEST FOR BEGINNERS",
-      "WINNER 2022"
+      "WINNER 2022",
     ],
     "warning": "79% Lose with this broker",
-    "image": "https://marketing.etorostatic.com/cache1/hp/v_254/images/meta/etoro_logo_social_share.png"
+    "image": "https://marketing.etorostatic.com/cache1/hp/v_254/images/meta/etoro_logo_social_share.png",
   },
   {
     "name": "Plus500",
@@ -67,7 +67,7 @@ app.get("/brokers", (req, res) => {
     "minDeposit": "Start from $100",
     "badges": [],
     "warning": "86% Lose with this broker",
-    "image": "https://cdn.cookielaw.org/logos/2f494615-359f-450b-8593-ba22d7ef2038/019121a0-c14c-70f5-a0a3-b14f6068f52c/826a263f-1619-4f4e-a818-5e3063560cfe/Plus500-logo-blue.png"
+    "image": "https://cdn.cookielaw.org/logos/2f494615-359f-450b-8593-ba22d7ef2038/019121a0-c14c-70f5-a0a3-b14f6068f52c/826a263f-1619-4f4e-a818-5e3063560cfe/Plus500-logo-blue.png",
   },
   {
     "name": "AvaTrade",
@@ -79,7 +79,7 @@ app.get("/brokers", (req, res) => {
     "minDeposit": "Start from $100",
     "badges": [],
     "warning": "85% Lose with this broker",
-    "image": "https://www.avatrade.com/next-images/site-logo-on-light-mob.svg"
+    "image": "https://www.avatrade.com/next-images/site-logo-on-light-mob.svg",
   }];
   res.json(brokers);
 });
