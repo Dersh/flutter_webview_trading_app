@@ -44,10 +44,13 @@ class _LearnScreenState extends State<LearnScreen> {
       body: FutureBuilder<List<Article>>(
         future: _future,
         builder: (context, snapshot) {
-          if (!snapshot.hasData) {
+          if (snapshot.connectionState != ConnectionState.done) {
             return const Center(child: CircularProgressIndicator());
           }
-          final articles = snapshot.data!;
+          if (snapshot.hasError) {
+            return Center(child: Text(snapshot.error.toString()));
+          }
+          final articles = snapshot.data ?? [];
           return RefreshIndicator(
             onRefresh: _refresh,
             child: ListView.builder(
