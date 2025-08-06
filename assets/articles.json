@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Introduction to Trading",
+    "reward": 10,
+    "content": "This lesson introduces the basics of trading. Scroll to the end to earn a reward."
+  },
+  {
+    "id": "2",
+    "title": "Risk Management",
+    "reward": 15,
+    "content": "Understanding risk management is crucial for trading."
+  },
+  {
+    "id": "3",
+    "title": "Technical Analysis",
+    "reward": 20,
+    "content": "Technical analysis helps to evaluate investments and identify opportunities."
+  },
+  {
+    "id": "4",
+    "title": "Fundamental Analysis",
+    "reward": 20,
+    "content": "This lesson covers economic factors that influence markets."
+  },
+  {
+    "id": "5",
+    "title": "Trading Psychology",
+    "reward": 15,
+    "content": "Psychology plays a key role in trading decisions."
+  },
+  {
+    "id": "6",
+    "title": "Strategy Development",
+    "reward": 25,
+    "content": "Developing a strategy helps in consistent trading results."
+  }
+]
