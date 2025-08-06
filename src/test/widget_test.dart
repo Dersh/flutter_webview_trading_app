@@ -7,6 +7,7 @@ import 'dart:io';
 
 import 'package:trading_study_webview/features/balance/balance_cubit.dart';
 import 'package:trading_study_webview/features/balance/balance_storage.dart';
+import 'package:trading_study_webview/features/brokers/dto/broker_dto.dart';
 import 'package:trading_study_webview/features/brokers/screens/brokers_screen.dart';
 import 'package:trading_study_webview/features/brokers/data/brokers_repository.dart';
 import 'package:trading_study_webview/features/brokers/data/brokers_data_provider.dart';
@@ -102,8 +103,7 @@ class FakeBalanceStorage implements BalanceStorage {
 class FakeBrokersDataProvider implements BrokersDataProvider {
   @override
   Future<List<BrokerDto>> fetchBrokers() async {
-    final data =
-        await File('test/fixtures/brokers.json').readAsString();
+    final data = await File('test/fixtures/brokers.json').readAsString();
     final list = json.decode(data) as List<dynamic>;
     return list
         .map((e) => BrokerDto.fromJson(e as Map<String, dynamic>))

@@ -41,7 +41,7 @@ GoRouter createRouter() {
           GoRoute(
             path: '/brokers',
             pageBuilder: (context, state) =>
-                const NoTransitionPage(child: BrokersScreen()),
+                NoTransitionPage(child: BrokersScreen()),
           ),
         ],
       ),

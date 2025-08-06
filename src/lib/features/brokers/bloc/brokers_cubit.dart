@@ -33,7 +33,7 @@ class BrokersCubit extends Cubit<BrokersState> {
   Future<void> load() async {
     try {
       emit(const BrokersLoading());
-      final brokers = await _repository.loadBrokers();
+      final brokers = await _repository.getBrokers();
       emit(BrokersLoaded(brokers));
     } catch (e) {
       emit(BrokersError(e.toString()));

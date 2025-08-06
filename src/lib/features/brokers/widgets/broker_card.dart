@@ -35,9 +35,7 @@ class BrokerCard extends StatelessWidget {
             const SizedBox(height: 8),
             Wrap(
               spacing: 4,
-              children: broker.badges
-                  .map((e) => Chip(label: Text(e)))
-                  .toList(),
+              children: broker.badges.map((e) => Chip(label: Text(e))).toList(),
             ),
             const SizedBox(height: 8),
             Text('Trust score: ${broker.trustScore}'),
