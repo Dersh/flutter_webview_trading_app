@@ -17,14 +17,16 @@ GoRouter createRouter() {
         routes: [
           GoRoute(
             path: '/learn',
-            pageBuilder: (context, state) => NoTransitionPage(child: const LearnScreen()),
+            pageBuilder: (context, state) =>
+                const NoTransitionPage(child: LearnScreen()),
             routes: [
               GoRoute(
                 path: ':id',
                 builder: (context, state) {
                   final article = state.extra as Article?;
                   if (article == null) {
-                    return const Scaffold(body: Center(child: Text('Not found')));
+                    return const Scaffold(
+                        body: Center(child: Text('Not found')));
                   }
                   return ArticleDetailPage(article: article);
                 },
@@ -33,11 +35,13 @@ GoRouter createRouter() {
           ),
           GoRoute(
             path: '/trade',
-            pageBuilder: (context, state) => NoTransitionPage(child: const TradeScreen()),
+            pageBuilder: (context, state) =>
+                const NoTransitionPage(child: TradeScreen()),
           ),
           GoRoute(
             path: '/brokers',
-            pageBuilder: (context, state) => NoTransitionPage(child: const BrokersScreen()),
+            pageBuilder: (context, state) =>
+                const NoTransitionPage(child: BrokersScreen()),
           ),
         ],
       ),
