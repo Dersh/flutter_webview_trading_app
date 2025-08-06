@@ -1,19 +1,15 @@
-import 'dart:convert';
-
-import 'package:flutter/services.dart';
-
-import '../dto/broker_dto.dart';
 import '../models/broker.dart';
+import '../dto/broker_dto.dart';
+import 'brokers_data_provider.dart';
 
-/// Repository responsible for loading brokers list.
+/// Repository converts DTOs to domain models.
 class BrokersRepository {
-  const BrokersRepository();
+  const BrokersRepository(this._provider);
 
-  Future<List<Broker>> loadBrokers() async {
-    final data = await rootBundle.loadString('assets/brokers.json');
-    final list = json.decode(data) as List<dynamic>;
-    return list
-        .map((e) => BrokerDto.fromJson(e as Map<String, dynamic>).toModel())
-        .toList();
+  final BrokersDataProvider _provider;
+
+  Future<List<Broker>> getBrokers() async {
+    final dtos = await _provider.fetchBrokers();
+    return dtos.map((e) => e.toModel()).toList();
   }
 }

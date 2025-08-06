@@ -1,0 +1,41 @@
+[
+  {
+    "id": "etoro",
+    "name": "Etoro",
+    "url": "https://www.etoro.com",
+    "description": "Forex, Stocks, Crypto, CFD, Commodities, CopyTradeTM",
+    "trustScore": 4.8,
+    "founded": 2007,
+    "accounts": "20M+",
+    "minDeposit": "Start from \$50",
+    "badges": ["BEST FOR BEGINNERS", "WINNER 2022"],
+    "warning": "79% Lose with this broker",
+    "image": "https://seeklogo.com/images/E/etoro-logo-0E5B0C3E1A-seeklogo.com.png"
+  },
+  {
+    "id": "plus500",
+    "name": "Plus500",
+    "url": "https://www.plus500.com",
+    "description": "CFD, Crypto, Forex, Stocks, Commodities",
+    "trustScore": 4.4,
+    "founded": 2008,
+    "accounts": "288k",
+    "minDeposit": "Start from \$100",
+    "badges": [],
+    "warning": "86% Lose with this broker",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Plus500-Logo.png"
+  },
+  {
+    "id": "avatrade",
+    "name": "AvaTrade",
+    "url": "https://www.avatrade.com",
+    "description": "Forex, Stocks, Commodities, Cryptos & Stocks",
+    "trustScore": 4.4,
+    "founded": 2006,
+    "accounts": "5M+",
+    "minDeposit": "Start from \$100",
+    "badges": [],
+    "warning": "85% Lose with this broker",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/AvaTrade.png"
+  }
+]
