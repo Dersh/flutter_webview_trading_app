@@ -58,7 +58,7 @@ class _TradeScreenState extends State<TradeScreen> {
             padding: const EdgeInsets.all(16),
             child: LineChart(
               LineChartData(
-                titlesData: FlTitlesData(show: false),
+                titlesData: const FlTitlesData(show: false),
                 borderData: FlBorderData(show: false),
                 lineBarsData: [
                   LineChartBarData(

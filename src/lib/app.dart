@@ -13,24 +13,29 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     final storage = BalanceStorage();
     final router = createRouter();
+
     return EasyLocalization(
       supportedLocales: const [Locale('en')],
       path: 'assets/translations',
       fallbackLocale: const Locale('en'),
-      child: MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (_) => BalanceCubit(storage: storage)..load(),
-          ),
-        ],
-        child: MaterialApp.router(
-          title: 'Trading App',
-          theme: ThemeData(useMaterial3: true),
-          routerConfig: router,
-          locale: context.locale,
-          supportedLocales: context.supportedLocales,
-          localizationsDelegates: context.localizationDelegates,
-        ),
+      child: Builder(
+        builder: (context) {
+          return MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (_) => BalanceCubit(storage: storage)..load(),
+              ),
+            ],
+            child: MaterialApp.router(
+              title: 'Trading App',
+              theme: ThemeData(useMaterial3: true),
+              routerConfig: router,
+              locale: context.locale,
+              supportedLocales: context.supportedLocales,
+              localizationsDelegates: context.localizationDelegates,
+            ),
+          );
+        },
       ),
     );
   }
