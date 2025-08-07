@@ -1,5 +1,11 @@
-const functions = require("firebase-functions");
+const {setGlobalOptions} = require("firebase-functions");
+const {onRequest} = require("firebase-functions/https");
+const logger = require("firebase-functions/logger");
 const express = require("express");
+const fetch = require("node-fetch");
+
+setGlobalOptions({maxInstances: 10});
+
 const app = express();
 
 app.get("/articles", (req, res) => {
@@ -84,5 +90,15 @@ app.get("/brokers", (req, res) => {
   res.json(brokers);
 });
 
+app.get("/forex", async (req, res) => {
+  try {
+    const response = await fetch("https://fcsapi.com/api-v3/forex/latest?symbol=all_forex&access_key=MMYvxViGmXXXXXXXXXSAeZiOJGng");
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    logger.error("Error fetching forex data", error);
+    res.status(500).json({error: "Failed to fetch forex data"});
+  }
+});
 
-exports.api = functions.https.onRequest(app);
+exports.api = onRequest(app);
